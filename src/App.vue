@@ -1,32 +1,32 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="main-height">
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
+    <Footer />
   </div>
+
 </template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import Footer from '@/components/Footer'
+export default {
+  components: {
+    Footer
   }
+
 }
+</script>
+<style lang="scss">
+*{ margin : 0; padding : 0;}
+ul,li{ list-style: none;}
+img{ display: block;}
+html,body{ height:100%; font-family: 'Microsoft YaHei','Times New Roman', Times, serif;}
+a{text-decoration: none; color: #E54847;}
+.clearfix:after{ content:""; display: block; clear:both;}
+
+#main-height{
+  width: 100%;
+  height: 100%;
+}
+
 </style>
